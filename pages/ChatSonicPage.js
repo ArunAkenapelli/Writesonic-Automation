@@ -28,6 +28,22 @@ class ChatSonicPage {
     btnChangeMode = "//p[@class='underline cursor-pointer']";
     txtGeneralAi = "//div[text()='General AI']";
     txtAstrologer = "//div[text()='Astrologer']";
+    txtDoctorr = "//div[text()='Doctor']";
+    txtStandupComedian = "//div[text()='Stand-up Comedian']";
+    txtPoet = "//div[text()='Poet']";
+    txtPersonalTrainer = "//div[text()='Personal Trainer']";
+    txtEnglishTranslator = "//div[text()='English Translator']";
+    txtPhilosopher = "//div[text()='Philosopher']";
+    txtInterviewer = "//div[text()='Interviewer']";
+    txtMotivationalCoach = "//div[text()='Motivational Coach']";
+    txtDentist = "//div[text()='Dentist']";
+    txtMotivationalCoach = "//div[text()='Motivational Coach']";
+    txtAccountant = "//div[text()='Accountant']";
+    txtMathTeacher = "//div[text()='Math Teacher']";
+    txtRelationshipCoach = "//div[text()='Relationship Coach']";
+    txtTravelGuide = "//div[text()='Travel Guide']";
+    txtCareerCounselor = "//div[text()='Career Counselor']";
+
     btnStartChat = "//div[text()='Start Chat']";
     gettxtAstrologer = "//strong[text()='Astrologer']";
     gettxtYouarechattingwithGeneralAI = "//span[text()='You are chatting with General AI']";
@@ -45,7 +61,7 @@ class ChatSonicPage {
         I.fillField(this.lblchatSonicText, chatsonictxt)
     };
     clickOnIncludelatestGoogledataToggleButton() {
-      
+
         I.click(this.tgleBtnIncludelatestGoogledata);
     };
     clickOnSendButton() {
@@ -135,6 +151,7 @@ class ChatSonicPage {
     };
     clickOnStartChat() {
         I.click(this.btnStartChat);
+        I.scrollPageToBottom();
     };
     clickOnEditIconForQuestion() {
         I.waitForVisible(this.btnSend, 100);
@@ -144,6 +161,48 @@ class ChatSonicPage {
     clickOnReSubmitButton() {
         I.click(this.btnResubmit);
         I.waitForVisible(this.btnSend, 50);
+    };
+    clickOnDoctor() {
+        I.click(this.txtDoctorr);
+    };
+    clickOnStandUpComedian() {
+        I.click(this.txtStandupComedian);
+    };
+    clickOnPoet() {
+        I.click(this.txtPoet);
+    };
+    clickOnPersonalTrainer() {
+        I.click(this.txtPersonalTrainer);
+    };
+    clickOnPhilosopher() {
+        I.click(this.txtPhilosopher);
+    };
+    clickOnInterviewer() {
+        I.click(this.txtInterviewer);
+    };
+    clickOnMotivationalCoach() {
+        I.click(this.txtMotivationalCoach);
+    };
+    clickOnDentist() {
+        I.click(this.txtDentist);
+    };
+    clickOnAccountant() {
+        I.click(this.txtAccountant);
+    };
+    clickOnMathTeacher() {
+        I.click(this.txtMathTeacher);
+    };
+    clickOnRelationShip() {
+        I.click(this.txtRelationshipCoach);
+    };
+    clickOnTravelGuide() {
+        I.click(this.txtTravelGuide);
+    };
+    clickOnCareerCounselor() {
+        I.click(this.txtCareerCounselor);
+    };
+    clickOnEnglishTranslator() {
+        I.click(this.txtEnglishTranslator);
     };
 }
 module.exports = new ChatSonicPage();

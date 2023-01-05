@@ -34,6 +34,8 @@ class BaseAutomationPage {
     btnArticleSave = "//button[@class='group border bg-white rounded-full flex justify-center items-center hover:border-purple-100 h-10 w-10 shadow-unsubscribeSection']";
     btnCancel = "//div[text()='Cancel']";
     btnBookmark = "//button[@aria-label='Bookmark']";
+    iconProfile = "//img[contains(@class,'rounded-full border')]";
+
         //Methods-------------------------------------------------------
     clickOnResetChat() {
         I.click(this.btnResetChat);
@@ -152,6 +154,10 @@ class BaseAutomationPage {
     };
     clickOnBookMarkIcon(){
         I.click(this.btnBookmark);
+    };
+    clickOnProfileIcon(){
+        I.waitForVisible(this.iconProfile, 100)
+        I.click(this.iconProfile);
     }
 }
 module.exports = new BaseAutomationPage();

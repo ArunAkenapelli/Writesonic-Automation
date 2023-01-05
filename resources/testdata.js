@@ -3,7 +3,7 @@ const { I } = inject();
 module.exports = {
 
   home: {
-    // baseUrl: 'https://app.writesonic.com/login',
+    //baseUrl: 'https://app.writesonic.com/login',
     baseUrl: 'https://staging.writesonic.com/login',
   },
 
@@ -44,14 +44,27 @@ module.exports = {
     topic: 'Car Accident',
     targetkeywords: 'Road',
   },
-  ArticleRewriter:{
+  ArticleRewriter: {
     Link: 'https://staging.writesonic.com/share/ai-article-writer-v3/65116296-b38b-4376-8ad0-a3d8fd3efc48',
     invalidLink: 'https://staging.writesonic.com',
     Article: "  Assembly is where your program gets compiled into machine-readable code. ",
   },
-  MakeYourOwnAI:{
+  MakeYourOwnAI: {
     context: "Recently, Tesla released the optimus humanoid robot that can da several tasks, including picking up a box and placing it on a desk, and picking up a watering can and watering plants.",
     instructions: "Write a funny story about a day in the life of optimus."
+  },
+  PlansandBillings: {
+    Commentforsubscribe: "Content is not good",
+    cardnumber: "4111111111111111",
+    expirymonth: "12",
+    expiryyear: "2029",
+    cvv: "123",
+    firstname: "Arun",
+    lastname: "A",
+    Addressline1: "abcd",
+    Addressline2: "qwert",
+    city: "Hyderabad",
+    zipcode: "503201"
   },
   language: 'English',
   outputs: '2',

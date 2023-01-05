@@ -5,7 +5,7 @@ Feature('Make Your Own AI');
 Before(({ I, loginPage, testData }) => {
     allure.severity('Blocker');
     I.amOnPage(testData.home.baseUrl);
-    loginPage.loginWithGoogleAccount(testData.login.email, testData.login.password);
+    loginPage.loginWithPassword(testData.login.email, testData.login.password);
 
 })
 Scenario('Verify Mandatory Validation For Instruction Field', ({ I, BaseAutomationPage, MakeYourOwnAIPage, testData, expectedAssertionsPage }) => {
@@ -28,7 +28,7 @@ Scenario('AI generation using MakeYourOwnAI', ({ I, BaseAutomationPage, MakeYour
     allure.setDescription('mandatory validation for all input fields');
 
     MakeYourOwnAIPage.clickOnMakeYourOwnAIfeature();
-    MakeYourOwnAIPage.setContext(testData.MakeYourOwnAI.context);
+   // MakeYourOwnAIPage.setContext(testData.MakeYourOwnAI.context);
     MakeYourOwnAIPage.setInstructions(testData.MakeYourOwnAI.instructions);
     BaseAutomationPage.setLanguageAsEnglish(testData.language);
     BaseAutomationPage.setOutputs(testData.outputs);

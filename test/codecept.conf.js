@@ -18,10 +18,10 @@ exports.config = {
       url: 'https://www.google.com/',
       show: true,
       browser: 'chromium',
-       video: 'keepVideoForPassedTests',
-       video: 'enables video recording for failed tests',
-       video: 'recordVideo',
-    }
+      video: 'keepVideoForPassedTests',
+      video: 'enables video recording for failed tests',
+      video: 'recordVideo',
+    },
   },
   include: {
     "I": "../steps_file.js",
@@ -36,13 +36,14 @@ exports.config = {
     "BaseAutomationPage": "../pages/BaseAutomationPage.js",
     "InstantArticleWriterPage": "../pages/InstantArticleWriterPage.js",
     "ArticleRewriterPage": "../pages/ArticleRewriterPage.js",
-    "MakeYourOwnAIPage": "../pages/MakeYourOwnAIPage.js"
+    "MakeYourOwnAIPage": "../pages/MakeYourOwnAIPage.js",
+    "PlansAndBillingPage": "../Pages/PlansAndBillingPage.js",
   },
   name: 'writesonic_POM',
   plugins: {
     allure: {
       outputDir: "../allure-results",
-     enable: true,
+      enable: true,
     }
   }
 }

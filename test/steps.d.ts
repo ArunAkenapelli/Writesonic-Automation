@@ -12,11 +12,12 @@ type BaseAutomationPage = typeof import('../pages/BaseAutomationPage.js');
 type ArticleRewriterPage = typeof import('../pages/ArticleRewriterPage.js');
 type InstantArticleWriterPage = typeof import('../pages/InstantArticleWriterPage.js');
 type MakeYourOwnAIPage = typeof import('../pages/MakeYourOwnAIPage.js');
+type PlansAndBillingPage = typeof import('../pages/PlansAndBillingPage.js');
 
 declare namespace CodeceptJS {
   interface SupportObject { I: I, current: any, loginPage: loginPage, testData: testData, expectedAssertionsPage: expectedAssertionsPage, article3OPage: article3OPage, article4OPage: article4OPage,
     AIArticlePage: AIArticlePage,ChatSonicPage:ChatSonicPage, SonicEditorPage:SonicEditorPage,BaseAutomationPage:BaseAutomationPage, ArticleRewriterPage: ArticleRewriterPage, InstantArticleWriterPage: InstantArticleWriterPage,
-    MakeYourOwnAIPage: MakeYourOwnAIPage}
+    MakeYourOwnAIPage: MakeYourOwnAIPage, PlansAndBillingPage:PlansAndBillingPage}
   interface Methods extends Playwright { }
   interface I extends ReturnType<steps_file> { }
   namespace Translation {

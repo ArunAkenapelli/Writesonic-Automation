@@ -5,7 +5,7 @@ Feature('Article4.O');
 Before(({ I, loginPage, testData }) => {
     allure.severity('Blocker');
     I.amOnPage(testData.home.baseUrl);
-    loginPage.loginWithGoogleAccount(testData.login.email, testData.login.password);
+    loginPage.loginWithPassword(testData.login.email, testData.login.password);
 
 })
 Scenario('Verify Mandatory Validation For All Input Fields Of Article4.O', ({ I, article4OPage, AIArticlePage ,expectedAssertionsPage }) => {

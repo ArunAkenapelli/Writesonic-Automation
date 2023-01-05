@@ -3,7 +3,7 @@ Feature('Article3.O');
 
 Before(({ I, loginPage, testData }) => {
     I.amOnPage(testData.home.baseUrl);
-    loginPage.loginWithGoogleAccount(testData.login.email, testData.login.password);
+    loginPage.loginWithPassword(testData.login.email, testData.login.password);
 
 })
 

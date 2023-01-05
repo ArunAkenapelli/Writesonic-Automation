@@ -5,7 +5,7 @@ Feature('Instant Article Writer');
 Before(({ I, loginPage, testData }) => {
     allure.severity('Blocker');
     I.amOnPage(testData.home.baseUrl);
-    loginPage.loginWithGoogleAccount(testData.login.email, testData.login.password);
+    loginPage.loginWithPassword(testData.login.email, testData.login.password);
 
 })
 Scenario('Verify Mandatory Validation For Title Fields Of Instatnt Article Writer', ({ I,InstantArticleWriterPage, expectedAssertionsPage, BaseAutomationPage}) => {

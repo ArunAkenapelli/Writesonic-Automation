@@ -5,7 +5,7 @@ Feature('Article Rewriter');
 Before(({ I, loginPage, testData}) => {
     allure.severity('Blocker');
     I.amOnPage(testData.home.baseUrl);
-    loginPage.loginWithGoogleAccount(testData.login.email, testData.login.password);
+    loginPage.loginWithPassword(testData.login.email, testData.login.password);
 });
 Scenario('Verify Mandatory Validation For Link Fields Of Article Rewriter', ({ I, ArticleRewriterPage, expectedAssertionsPage, BaseAutomationPage }) => {
     allure.epic('Article And Blogs');
@@ -41,8 +41,8 @@ Scenario('Verify the Rewriting of Article By Link', ({ I, ArticleRewriterPage, B
     //Navigating to Article Rewriter
     ArticleRewriterPage.clickOnArticleRewriterfeature();
     ArticleRewriterPage.setLink(testData.ArticleRewriter.Link);
-    BaseAutomationPage.setQualityType(testData.good);
-    BaseAutomationPage.clickOnGood();
+    //BaseAutomationPage.setQualityType(testData.good);
+    //BaseAutomationPage.clickOnGood();
     BaseAutomationPage.clickOnGenerateButton();
 
     BaseAutomationPage.clickOnStarRating1();
@@ -77,8 +77,8 @@ Scenario('Verify the Rewriting of Article By Article', ({ I, ArticleRewriterPage
     //Navigating to Article Rewriter
     ArticleRewriterPage.clickOnArticleRewriterfeature();
     ArticleRewriterPage.clickOnUrlMainContainToggleBtn();
-    BaseAutomationPage.setQualityType(testData.good);
-    BaseAutomationPage.clickOnGood();
+    //BaseAutomationPage.setQualityType(testData.good);
+    //BaseAutomationPage.clickOnGood();
     ArticleRewriterPage.setArticle(testData.ArticleRewriter.Article);
     BaseAutomationPage.clickOnGenerateButton();
     BaseAutomationPage.clickOnStarRating1();

@@ -62,5 +62,12 @@ class loginPage {
     I.switchToPreviousTab();
     I.wait(10);
   };
+  loginWithPassword(email, password){
+    I.click(this.btnSignInWithPassword);
+    I.fillField(this.txtEmail, email);
+    I.fillField(this.txtPassword, password);
+    I.click(this.btnLogin);
+    I.waitForVisible(this.veryMyAccount, 50);
+  };
 }
 module.exports = new loginPage();

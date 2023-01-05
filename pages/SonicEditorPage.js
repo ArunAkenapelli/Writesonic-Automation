@@ -47,6 +47,7 @@ class SonicEditorPage {
         I.click(this.btnmedium);
     };
     clickOnLong() {
+        I.waitForVisible(this.btnlong, 10);
         I.click(this.btnlong);
     };
     clickOnGeneralTabIcon() {
