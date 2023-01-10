@@ -1,1 +1,1 @@
-"C:\Arun GIT\Writesonic-automation\test\testrun.bat"
+.\test\testrun.bat
