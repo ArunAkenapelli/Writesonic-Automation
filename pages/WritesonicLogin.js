@@ -16,15 +16,27 @@ class loginPage {
   lblcode = "//input[@id='code']";
   btnVerify = "//div[text()='Verify']";
   btnSignInWithPassword = "//div[text()='Sign in with password']";
+  btnSignInWithOTP = "//div[text()='Sign in with OTP']";
+  lblEmail = "//input[@type='email']";
+  lblPassword = "//input[@type='password']";
+  lblConfirmMail = "(//span[text()='Confirm your email to start using Writesonic'])[2]";
+  getTxtOTP = "//td[contains(text(),'Or you can also')]/parent::tr/following-sibling::tr/td";
+  txtOtp = "//input[@id='code']";
+  //btnVerify = "//div[normalize-space()='Verify']";
+  txtGrabOtp = "//td[contains(text(),'Or you can also')]/parent::tr/following-sibling::tr/td";
+  btnSignInForGmail = "//a[text()='Sign in']";
+
   //Method-------------------------------
   clickOnSignInTab() {
     I.waitForVisible(this.btnSignIn, 10);
     I.click(this.btnSignIn);
   };
   setEmail(email) {
+    I.clearField(this.txtEmail);
     I.fillField(this.txtEmail, email);
   };
   setPassword(password) {
+    I.clearField(this.txtPassword);
     I.fillField(this.txtPassword, password);
   };
   setCode(code) {
@@ -55,19 +67,59 @@ class loginPage {
     I.fillField(this.txtGmail, email)
     I.click(this.btnNext);
     I.wait(3);
-   // I.see(testDataPage.login.email);
     I.waitForVisible(this.txtGmailPassword, 100);
     I.fillField(this.txtGmailPassword, password)
     I.click(this.btnNext);
     I.switchToPreviousTab();
     I.wait(10);
   };
-  loginWithPassword(email, password){
+  loginWithPassword(email, password) {
     I.click(this.btnSignInWithPassword);
+    I.waitForVisible(this.txtPassword, 30);
     I.fillField(this.txtEmail, email);
     I.fillField(this.txtPassword, password);
     I.click(this.btnLogin);
     I.waitForVisible(this.veryMyAccount, 50);
   };
+
+  //sign in with otp---------
+  clickOnSignWithOTP() {
+    I.waitForVisible(this.btnSignInWithOTP);
+    I.click(this.btnSignInWithOTP);
+  };
+
+  setOTP(otp) {
+    I.waitForVisible(this.txtOtp, 20);
+    I.fillField(this.txtOtp, otp);
+  };
+
+  clickOnVerifyButton() {
+    I.click(this.btnVerify);
+  };
+
+  //-------gmail------------
+
+  setGmail(gmail) {
+    I.waitForVisible(this.lblEmail);
+    I.fillField(this.lblEmail, gmail)
+  };
+
+  clickOnNextButton() {
+    I.click(this.btnNext);
+  };
+
+  setGmailPassword(pswrd) {
+    I.waitForVisible(this.lblPassword, 50);
+    I.fillField(this.lblPassword,pswrd);
+  };
+
+  clickOnConfirmMail() {
+    I.waitForVisible(this.lblConfirmMail, 30);
+    I.click(this.lblConfirmMail);
+  };
+  clickOnSignInButtonOnGmail(){
+    I.click(this.btnSignInForGmail);
+  }
+
 }
 module.exports = new loginPage();

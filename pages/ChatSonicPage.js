@@ -8,7 +8,7 @@ class ChatSonicPage {
     tgleBtnIncludelatestGoogledata = "//label[@class='inline-flex relative cursor-pointer']";
     btnSend = "//div[@class='absolute right-2 bottom-2 mt-2 cursor-pointer']";
     btnRecording = "//button[@class='ml-2 mt-2']";
-    btnSettings = "//button[@class='ml-2 mt-2']/following-sibling::div";
+    btnSettings = "//button[@aria-label='Open Settings']";
     tgleBtnTextToSpeech = "//p[text()='Text To Speech: ']/following-sibling::div/label";
     btnCanelSetting = "//p[text()='Settings']/following-sibling::button";
     btnWatchDemo = "//span[text()='Watch a demo']";
@@ -43,12 +43,15 @@ class ChatSonicPage {
     txtRelationshipCoach = "//div[text()='Relationship Coach']";
     txtTravelGuide = "//div[text()='Travel Guide']";
     txtCareerCounselor = "//div[text()='Career Counselor']";
-
+    imagesForDrpdwn = "//button[@class='inline-flex justify-center w-40 rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500']";
     btnStartChat = "//div[text()='Start Chat']";
     gettxtAstrologer = "//strong[text()='Astrologer']";
     gettxtYouarechattingwithGeneralAI = "//span[text()='You are chatting with General AI']";
     btnResubmit = "//div[text()='Resubmit']";
     gettxtInvalidData = "//div[@class='bg-red-200 px-4 lg:px-2 group border-t border-b border-indigo-100']";
+    txtStableDiffusion = "//div[text()='Stable Diffusion']";
+    txtDallE = "//div[text()='DALL-E']";
+
     //Methods-----------------------------------------
     clickOnChatSonicTab() {
         I.waitForVisible(this.tabChatSonic, 50);
@@ -203,6 +206,15 @@ class ChatSonicPage {
     };
     clickOnEnglishTranslator() {
         I.click(this.txtEnglishTranslator);
+    };
+    clickOnImagesForDropDown() {
+        I.click(this.imagesForDrpdwn);
+    };
+    clickOnStableDiffusion() {
+        I.click(this.txtStableDiffusion);
+    };
+    clickOnDallE() {
+        I.click(this.txtDallE);
     };
 }
 module.exports = new ChatSonicPage();

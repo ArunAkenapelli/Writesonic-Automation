@@ -32,6 +32,7 @@ class SonicEditorPage {
     };
     setTextOnSonicEditor(text) {
         I.fillField(this.lblSonicEditorText, text);
+        I.waitForVisible(this.clickOnWriteWithAi, 100);
     };
     setTextOnSonicEditorForSecond(text) {
         I.clearField(this.lblwords);

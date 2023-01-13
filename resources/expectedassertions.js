@@ -80,6 +80,10 @@ module.exports = {
         gettxttexthasbeencopiedtoclipboard: "Text has been copied to clipboard.",
         gettxtpleaseentermessage: "Please enter a message",
         gettxtinvaliddata: "I'm sorry, I don't understand. Could you please rephrase your question?",
+        gettxtDallE: "DALL-E",
+        gettxtStableDiffusion: "Stable Diffusion",
+        gettxtChatLiked: "Your chat has been liked",
+        gettxtChatDisLiked: "Your chat has been disliked",
 
         gettxtgeneralaiex1: "Which teams reached the quarter finals in the FIFA World Cup Qatar 2022?",
         gettxtgeneralaiex2: "Generate an HD image of Lionel Messi playing the FIFA World Cup.",

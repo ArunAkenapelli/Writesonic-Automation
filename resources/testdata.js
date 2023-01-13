@@ -3,8 +3,8 @@ const { I } = inject();
 module.exports = {
 
   home: {
-    //baseUrl: 'https://app.writesonic.com/login',
-    baseUrl: 'https://staging.writesonic.com/login',
+   //baseUrl: 'https://app.writesonic.com/login',
+   baseUrl: 'https://staging.writesonic.com/login',
   },
 
   login: {
@@ -18,7 +18,8 @@ module.exports = {
     invalidemail: 'bsxbj@uibcdn',
     invalidcode: '736',
     emptyemail: "",
-    emptypaswd: ""
+    emptypaswd: "",
+    gmailsigninurl: "https://mail.google.com/",
   },
   AIArticle: {
     topic: 'Beauty of nature',

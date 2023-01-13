@@ -1,13 +1,15 @@
 const { I } = inject();
 class PlansAndBillingPage {
+
     //Elements--------------------------------------------------  
     btnUnSubscribe = "(//div[text()='Unsubscribe'])[1]";
     rdoSomethingelse = "//input[@id='survey-option-94b3f300-60ee-48e3-8592-881176181292']";
-    btnNext = "//button[@class='ck-button px-10 py-3 text-base leading-6 font-medium rounded-md hover:opacity-75 transition ease-in-out duration-150 bg-brand-black text-white ck-black-primary-button']";
-    btnBack = "//button[@class='ck-button px-10 py-3 text-base leading-6 font-medium rounded-md hover:opacity-75 transition ease-in-out duration-150 bg-gray-200 text-brand-black ck-gray-primary-button']";
-    btnDeclineOffer = "//button[@class='ck-button px-10 py-3 text-base leading-6 font-medium rounded-md hover:opacity-75 transition ease-in-out duration-150 bg-brand-black text-white ck-black-primary-button']";
-    lblComment = "//textarea[@placeholder='We really read every answer.']";
-    btnGotoAccount = "//button[@class='ck-button px-10 px-10 py-3 text-base leading-6 font-medium rounded-md hover:opacity-75 transition ease-in-out duration-150 bg-brand-black text-white ck-black-primary-button']";
+    btnNext = "//button[text()=' Next ']";
+    btnBack = "//button[text()=' Back ']";
+    btnConfirmandCancel = "//button[text()=' Confirm & Cancel ']";
+    btnDeclineOffer = "//button[text()=' Decline Offer ']";
+    lblComment = "//textarea[@class='block w-full focus:border-client-primary sm:text-sm border-primary-middle rounded-md border-2 placeholder-gray-400']";
+    btnGotoAccount = "//button[text()=' Go to Account ']";
     btnReactivate = "//div[text()='Reactivate']";
     btnCancel = "//div[text ()= 'Cancel']";
     btnConfirm = "//div[text ()= 'Confirm']";
@@ -50,6 +52,11 @@ class PlansAndBillingPage {
     gettxtBillingShippingAddresses = "//div[@id='cb-header-title']";
     gettxtUpdateYourBillingDetails = "//span[@class='cb-header__text']";
     btnResumeNow = "(//button[contains(@class,'text-purple-1 text-sm')])[1]";
+    txtPremium = "//button[text()='premium']";
+    txtGood = "//button[text()='good']";
+    txtAverage = "//button[text()='average']";
+    txtEconomy = "//button[text()='economy']";
+    tgleAnnualBilling = "//button[starts-with(@id, 'headlessui-switch')]"
 
     //Methods---------------------------------------------------
     clickOnUnSubscribeButton() {
@@ -71,7 +78,7 @@ class PlansAndBillingPage {
         I.fillField(this.lblComment, comment)
     };
     clickOnConfirmAndCancelButton() {
-        I.click(this.btnNext);
+        I.click(this.btnConfirmandCancel);
     };
     clickOnGotoAccountButton() {
         I.click(this.btnGotoAccount);
@@ -163,9 +170,9 @@ class PlansAndBillingPage {
     };
     clickOnEditBillingDetails() {
         I.click(this.txtEditBillingDetails);
+        I.switchTo(this.iframe1);
     };
     clickOnBillingAddress() {
-        I.switchTo(this.iframe1);
         I.click(this.tabBillingAddress);
     };
     setFirstName(firstname) {
@@ -204,10 +211,25 @@ class PlansAndBillingPage {
     clickOnViewInvoices() {
         I.switchTo();
         I.click(this.txtViewInvoice);
+        I.switchTo(this.iframe1)
     };
     clickOnResumeNowButton() {
         I.click(this.btnResumeNow);
     };
-
+    clickOnPremium() {
+        I.click(this.txtPremium);
+    };
+    clickOnGood() {
+        I.click(this.txtGood);
+    };
+    clickOnAverage() {
+        I.click(this.txtAverage);
+    };
+    clickOnEconomy() {
+        I.click(this.txtEconomy);
+    };
+    clickOnAnnualBillingToggle() {
+        I.click(this.tgleAnnualBilling);
+    };
 }
 module.exports = new PlansAndBillingPage();

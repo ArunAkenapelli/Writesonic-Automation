@@ -61,6 +61,11 @@ Scenario('Verify Change Subscription Plan', ({ I, PlansAndBillingPage, testData,
     PlansAndBillingPage.scrollToChangePlan();
     PlansAndBillingPage.clickOnChangePlanButton();
     PlansAndBillingPage.clickOnCancelButton();
+    PlansAndBillingPage.clickOnGood();
+    PlansAndBillingPage.clickOnAverage();
+    PlansAndBillingPage.clickOnEconomy();
+    PlansAndBillingPage.clickOnPremium();
+    PlansAndBillingPage.clickOnAnnualBillingToggle();
     PlansAndBillingPage.clickOnChangePlanButton();
     PlansAndBillingPage.clickOnChangePlanButtonForChangeSubscriptionPlan();
     if (I.see(expectedAssertionsPage.PlansandBilling.gettxtSorrypalnchangedmonth)) {
@@ -112,9 +117,9 @@ Scenario('Verify Edit Billing Details and View Invoice', ({ I, PlansAndBillingPa
     //Edit Billing Details
     PlansAndBillingPage.clickOnEditBillingDetails();
     I.wait(3);
-    //I.seeElement(PlansAndBillingPage.gettxtBillingShippingAddresses);
+    I.seeElement(PlansAndBillingPage.gettxtBillingShippingAddresses);
     PlansAndBillingPage.clickOnBillingAddress();
-    // I.seeElement(PlansAndBillingPage.gettxtUpdateYourBillingDetails);
+    I.seeElement(PlansAndBillingPage.gettxtUpdateYourBillingDetails);
     PlansAndBillingPage.setFirstName(testData.PlansandBillings.firstname);
     PlansAndBillingPage.setLastName(testData.PlansandBillings.lastname);
     PlansAndBillingPage.setAddressLine1(testData.PlansandBillings.Addressline1);
@@ -128,5 +133,5 @@ Scenario('Verify Edit Billing Details and View Invoice', ({ I, PlansAndBillingPa
 
     //View Invoices
     PlansAndBillingPage.clickOnViewInvoices();
-    //I.seeElement(PlansAndBillingPage.gettxtBillingShippingAddresses);
+    I.seeElement(PlansAndBillingPage.gettxtBillingShippingAddresses);
 });
