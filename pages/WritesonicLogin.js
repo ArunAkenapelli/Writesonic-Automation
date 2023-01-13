@@ -87,27 +87,20 @@ class loginPage {
     I.waitForVisible(this.btnSignInWithOTP);
     I.click(this.btnSignInWithOTP);
   };
-
   setOTP(otp) {
     I.waitForVisible(this.txtOtp, 20);
     I.fillField(this.txtOtp, otp);
   };
-
   clickOnVerifyButton() {
     I.click(this.btnVerify);
   };
-
-  //-------gmail------------
-
   setGmail(gmail) {
     I.waitForVisible(this.lblEmail);
     I.fillField(this.lblEmail, gmail)
   };
-
   clickOnNextButton() {
     I.click(this.btnNext);
   };
-
   setGmailPassword(pswrd) {
     I.waitForVisible(this.lblPassword, 50);
     I.fillField(this.lblPassword,pswrd);
