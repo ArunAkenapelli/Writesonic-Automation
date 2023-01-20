@@ -2,7 +2,8 @@ const allure = codeceptjs.container.plugins('allure');
 Feature('Article3.O');
 
 Before(({ I, loginPage, testData }) => {
-    I.amOnPage(testData.home.baseUrl);
+    I.amOnPage('/');
+    loginPage.clickOnSignInWithPassword();
     loginPage.loginWithPassword(testData.login.email, testData.login.password);
 
 })
