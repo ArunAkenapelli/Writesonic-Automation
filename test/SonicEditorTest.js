@@ -3,7 +3,8 @@ const allure = codeceptjs.container.plugins('allure');
 Feature('SonicEditor');
 
 Before(({ I, loginPage, testData }) => {
-    I.amOnPage(testData.home.baseUrl);
+    I.amOnPage("/");
+    loginPage.clickOnSignInWithPassword();
     loginPage.loginWithPassword(testData.login.email, testData.login.password);
 
 });
@@ -17,7 +18,7 @@ Scenario('@Content Editor Test by Using Paragraph feature', ({ I, SonicEditorPag
     SonicEditorPage.clickOnSonicEditorFeature();
 
     //Sonic Mode Tab
-    SonicEditorPage.setTextOnSonicEditor(testData.SonicEditor.Soniceditortext);
+    SonicEditorPage.setTextOnSonicEditor(testData.SonicEditor.Soniceditortext1, testData.SonicEditor.Soniceditortext2);
     SonicEditorPage.clickOnSButton();
     SonicEditorPage.clickOnGeneralTabIcon();
     I.waitForInvisible(SonicEditorPage.btnS);
@@ -73,7 +74,7 @@ Scenario('@Content Editor Test by Using ArticleAiIntros feature', ({ I, SonicEdi
     SonicEditorPage.clickOnSonicEditorFeature();
 
     //Sonic Mode Tab
-    SonicEditorPage.setTextOnSonicEditor(testData.SonicEditor.Soniceditortext);
+    SonicEditorPage.setTextOnSonicEditor(testData.SonicEditor.Soniceditortext1, testData.SonicEditor.Soniceditortext2);
     SonicEditorPage.clickOnSButton();
     SonicEditorPage.clickOnGeneralTabIcon();
     I.waitForInvisible(SonicEditorPage.btnS);
